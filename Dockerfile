@@ -1,23 +1,12 @@
 FROM binfgsc/base-java:latest
 
-################## METADATA ######################
-LABEL base.image="binfgsc/base:latest"
-LABEL version="1"
-LABEL software="fastqc"
-LABEL software.version="0.11.8"
-LABEL about.summary="A quality control tool for high throughput sequence data."
-LABEL about.home="http://www.bioinformatics.babraham.ac.uk/projects/fastqc/"
-LABEL about.documentation="http://www.bioinformatics.babraham.ac.uk/projects/fastqc/Help/"
-LABEL about.license="SPDX:GPL-3.0"
-LABEL about.license.file="https://www.gnu.org/copyleft/gpl.html"
-
 ################## MAINTAINER ######################
 LABEL maintainer.name="William Hargreaves"
 LABEL maintainer.email="whargrea@uoguelph.ca"
 
 ################## INSTALLATION ######################
 # update
-RUN sudo apk --no-cache add perl
+RUN sudo apk --no-cache add perl ttf-dejavu
 
 # FASTQC
 ENV URL=http://www.bioinformatics.babraham.ac.uk/projects/fastqc
