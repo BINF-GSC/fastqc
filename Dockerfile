@@ -5,7 +5,8 @@ LABEL maintainer.name="William Hargreaves"
 LABEL maintainer.email="whargrea@uoguelph.ca"
 
 ################## INSTALLATION ######################
-# update
+# install perl and ttf-dejavu which contains fonts for the fastqc report
+# (alpine lacks all fonts)
 RUN sudo apk --no-cache add perl ttf-dejavu
 
 # FASTQC
